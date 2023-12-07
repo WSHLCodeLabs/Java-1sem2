@@ -4,7 +4,7 @@ public class lab31 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter a single-digit odd number: ");
+        System.out.print("Input : ");
         int height = scanner.nextInt();
 
         int mid = height / 2;
@@ -14,13 +14,13 @@ public class lab31 {
             int spaces = Math.abs(mid - i);
             int stars = mid + 1 - spaces;
 
-            for (int j = 0; j < spaces; j++) {
-                System.out.print(" ");
-            }
-
             for (int k = 0; k < stars; k++) {
                 System.out.print("*");
                 count++;
+            }
+
+            for (int j = 0; j < spaces; j++) {
+                System.out.print(" ");
             }
 
             System.out.println();
