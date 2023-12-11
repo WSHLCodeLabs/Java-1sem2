@@ -17,7 +17,7 @@ public class lab23 {
 
             System.out.print("Enter Score: ");
             double score = scanner.nextDouble();
-            scanner.nextLine(); // Consume the newline character
+            scanner.nextLine();
 
             if (score > maxScore) {
                 maxScore = score;
