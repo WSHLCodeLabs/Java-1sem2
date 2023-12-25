@@ -39,26 +39,21 @@ public class Point {
     public static void setCount(int count){
         Point.count = count;
     }
-
-    public double Distance(){
-        return Math.sqrt(this.x * this.x + this.y * this.y);
-    }
-
-    public double Distance(double x2, double y2){
-        double dx = this.x - x2;
-        double dy = this.y - y2;
-        return Math.sqrt(dx * dx + dy * dy);
-    }
-    
-    public double Distance(Point P){
-        return Distance(P.getX(),P.getY());
-    }
-
-    public static void increaseCount(){
+  public static void increseCount(){
         Point.count++;
+   }
+    public double Distance(){
+        return Distance(0.0,0.0);
+   }
+   
+    public double Distance(double x2, double y2){
+        return Math.sqrt(Math.pow(x2 - this.x, 2) + Math.pow(y2 - this.y, 2));
     }
+    public double Distance(Point p){
+        return Distance(p.x , p.y);
 
-    public String toString(){
-        return "(" + this.x + ", " + this.y + ")";
+   }
+   public String toString(){ 
+        return "(" + this.x + "," + this.y + ")";
     }
 }
