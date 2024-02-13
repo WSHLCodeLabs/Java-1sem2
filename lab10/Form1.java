@@ -49,7 +49,10 @@ public class Form1 extends JFrame {
             for (int j = 0 ; j < 8 ; j++){
                 bt[i][j] = new JButton();
                 bt[i][j].setPreferredSize(new Dimension(50,50));
-                bt[i][j].setBackground(Color.black);
+                if ((i+j) % 2 == 0)
+                    bt[i][j].setBackground(Color.black);
+                else 
+                    bt[i][j].setBackground(Color.white);
                 p.add(bt[i][j]);
             }
         }
